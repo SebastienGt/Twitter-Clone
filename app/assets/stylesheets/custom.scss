@@ -6,6 +6,18 @@
 
 $gray-medium-light: #eaeaea;
 
+/* forms */
+input, textarea, select, .uneditable-input {
+	border: 1px solid #bbb;
+	width: 100%;
+	margin-bottom: 15px;
+	@include box_sizing(border-box / 2);
+}
+
+input {
+	height: auto !important;
+}
+
 @mixin box_sizing {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
