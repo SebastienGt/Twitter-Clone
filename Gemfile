@@ -15,6 +15,7 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+gem 'bcrypt', '3.1.13'
 
 gem 'pg'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
