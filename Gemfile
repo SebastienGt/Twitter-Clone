@@ -21,7 +21,9 @@ gem 'minitest'
 gem 'minitest-reporters'
 gem 'guard'
 gem 'guard-minitest'
-
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 gem 'pg'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
