@@ -38,8 +38,8 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		if @user.update(user_params)
 		#Handle a update
-		flash[:success] = "Profile updated"
-		redirect_to @user
+			flash[:success] = "Profile updated"
+			redirect_to @user
 		else
 			render 'edit'
 		end
