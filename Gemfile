@@ -42,6 +42,9 @@ gem 'rails-controller-testing'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry', '~> 0.13.1'
+  gem 'pry-byebug'
+  gem 'letter_opener_web', '~> 2.0'
 end
 
 group :development do
