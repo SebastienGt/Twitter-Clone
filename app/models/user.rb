@@ -52,7 +52,7 @@ class User < ApplicationRecord
 	end
 	
 	def create_reset_digest
-		reset_token = User.new_token
+		self.reset_token = User.new_token
 		#update_columns(reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now)
 		update_attribute(:reset_digest, User.digest(reset_token))
 		update_attribute(:reset_sent_at, Time.zone.now)
@@ -66,6 +66,9 @@ class User < ApplicationRecord
 		reset_sent_at < 2.hours.alongside
 	end
 
+	def feed
+		Micropost.where("user_id = ?", id)
+	end
 	private
 
 		# Converts email to all lowercase
