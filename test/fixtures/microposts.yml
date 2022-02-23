@@ -5,7 +5,7 @@ one:
   created_at: <%= 10.minutes.ago %>
   user: michael
 
-two:
+ants:
   content: "Check out this new webapp"
   created_at: <%= 3.years.ago %>
   user: michael

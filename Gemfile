@@ -16,9 +16,11 @@ gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 gem 'bcrypt', '3.1.13'
-
+gem 'image_processing'
+gem 'active_storage_validations', '0.8.9'
 gem 'minitest'
 gem 'minitest-reporters'
+gem 'mini_magick'
 gem 'guard'
 gem 'guard-minitest'
 gem 'faker'
