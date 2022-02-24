@@ -8,7 +8,7 @@ one:
 ants:
   content: "Check out this new webapp"
   created_at: <%= 3.years.ago %>
-  user: michael
+  user: archer
 
 most_recent:
   content: "Writing a test"
