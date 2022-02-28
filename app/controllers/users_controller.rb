@@ -23,8 +23,8 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			#@user.send_activation_email
-			flash[:info] = "Please check your email account to activate your account."
-			flash[:success] = "Welcome to the app !"
+			flash[:info] = "S'il vous plait, vérifiez votre email pour confirmer votre compte."
+			flash[:success] = "Bienvenue sur Sebastien F. !"
 			#redirect_to root_url
 			reset_session
 			log_in @user
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		if @user.update(user_params)
 		#Handle a update
-			flash[:success] = "Profile updated"
+			flash[:success] = "Profil mis à jour"
 			redirect_to @user
 		else
 			render 'edit'
