@@ -4,11 +4,15 @@
 
 /* footer */
 
-$gray-medium-light: #eaeaea;
+$gray-medium-light: #f3f3f3;
+$gray: #fff;
+$gray-light: #fff;
+$gray-darker: #fff;
 
 footer {
 
 }
+
 
 @media (max-width: 800px) {
 	footer {
@@ -134,7 +138,6 @@ h2 {
 	margin-bottom: 30px;
 	text-align: center;
 	font-weight: normal;
-	color: $gray-light;
 }
 
 p {
@@ -142,9 +145,14 @@ p {
 	line-height: 1.7em;
 }
 
+textarea {
+	background-color: #222;
+}
 
 body {
 	padding-top: 60px;
+	background-color: #222;
+	color: white;
 }
 
 section {
@@ -160,6 +168,10 @@ textarea {
 	h1 {
 		margin-bottom: 10px;
 	}
+}
+
+.jumbotron {
+	background-color: #222;
 }
 
 /* sidebar */
@@ -198,7 +210,7 @@ aside {
 		float: left;
 		padding: 0 10px;
 		border-left: 1px solid $gray-lighter;
-		color: gray;
+		color: rgb(185, 185, 185);
 		&:first-child {
 			padding-left: 0;
 			color: blue;
