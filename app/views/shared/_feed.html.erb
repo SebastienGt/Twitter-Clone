@@ -3,4 +3,7 @@
     <%= render @feed_items %>
   </ol>
     <%= will_paginate @feed_items, params: { controller: :static_pages, action: :home} %>
+
+<% else %>
+  <h5>Créez votre premier poste et suivez vos amis pour voir leurs publications !</h5>
 <% end %>
