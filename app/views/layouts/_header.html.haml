@@ -1,0 +1,29 @@
+%body
+  %header.navbar.navbar-fixed-top.navbar-inverse
+    .container
+      = link_to "Sebastien F.", root_path, id: "logo"
+      %nav
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+        %ul#bs-example-navbar-collapse-1.nav.navbar-nav.navbar-right.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to "Accueil", root_path
+            %li= link_to "Informations", help_path
+            - if logged_in?
+              %li= link_to "Utilisateurs", users_path
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Compte
+                  %b.caret
+                %ul.dropdown-menu
+                  %li= link_to "Profil", current_user
+                  %li= link_to "Options", edit_user_path(current_user)
+                  %li.divider
+                  %li
+                    = link_to "Se déconnecter", logout_path, method: :delete
+            - else
+              %li= link_to "Se connecter", login_path
