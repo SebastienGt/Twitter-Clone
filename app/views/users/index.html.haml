@@ -1,5 +1,6 @@
 - provide(:title, 'All users')
-%h1 Tous les utilisateurs
+%h1 
+  = t('index.allUsers')
 = will_paginate
 %ul.users
   = render @users

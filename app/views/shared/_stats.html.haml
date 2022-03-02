@@ -3,8 +3,8 @@
   %a{:href => "#{following_user_path(@user)}"}
     %strong#following.stat
       = @user.following.count
-    Abonnements
+    = t('user.following')
   %a{:href => "#{followers_user_path(@user)}"}
     %strong#followers.stat
       = @user.followers.count
-    Abonnés
+    = t('user.follower')
