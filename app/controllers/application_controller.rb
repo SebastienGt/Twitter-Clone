@@ -8,13 +8,21 @@ class ApplicationController < ActionController::Base
 		I18n.with_locale(locale, &action)
 	end
 
+	
+	protect_from_forgery
+
+		def default_url_options(options={})
+		logger.debug "default_url_options is passed options: #{options.inspect}\n"
+		{ :locale => I18n.locale }
+		end
+
 	private
 
 		# Confirm a logged in user
 		def logged_in_user
 			unless logged_in?
 				store_location
-				flash[:danger] = "S'il vous plait, connectez-vous."
+				flash[:danger] = I18n.t 'user.pleaseConnect'
 				redirect_to login_url
 			end
 		end

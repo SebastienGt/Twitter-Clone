@@ -10,6 +10,7 @@ fr:
     logIn: "Se connecter"
     contactMe: "Contactez-moi"
     clone: "Une copie de Twitter avec Rails par"
+    language: "Français"
   home:
     welcome: "Bienvenue sur le site de Sébastien F."
     subWelcome: "Ce site a été fait pour apprendre le langage Rails, il s'agit d'un clone de"
@@ -25,11 +26,30 @@ fr:
     follow: "S'abonner"
     unfollow: "Se désabonner"
     signUp: "S'inscrire"
+    verify: "S'il vous plait, vérifiez votre email pour confirmer votre compte."
+    updated: "Profil mis à jour"
+    deleted: "Utilisateur supprimé"
+    pleaseConnect: "S'il vous plait, connectez-vous."
+    emailSent: "Un mail a été envoyé avec les instructions pour réinitialiser votre mot de passe"
+    emailNotFound: "Email inconnu"
+    passwordReset: "Mot de passe réinitialisé."
+    passwordExpired: "Le lien a expiré"
+    accountNotActivated: "Compte non activé. "
+    checkEmail: "Regardez votre mail pour le lien d'activation."
+    invalidLogin: "Email/Mot de passe incorrect"
+    activated: "Compte activé !"
+    invalidLink: "Lien d'activation non valide"
+    notEmpty: "Ne peut être vide"
+
   post:
     placeHolder: "Ecrivez votre première publication ..."
     publish: "Publier"
     delete: "Supprimer"
     posts: "Publications"
+    created: "Publication créée !"
+    deleted: "Publication supprimée"
+    posted: "Posté il y a"
+    ago: ""
   feed:
     createFirst: "Créez votre premier poste et suivez vos amis pour voir leurs publications !"
   about:
@@ -47,6 +67,8 @@ fr:
   index:
     allUsers: "Tous les utilisateurs"
   edit:
-    updateProfile: "Update your profile"
+    updateProfile: "Modifier votre profil"
+    save: "Sauvegarder les changements"
   system: 
-    sure: "Vous êtes sûr ?"
+    sure: "Êtes-vous sûr ?"
+

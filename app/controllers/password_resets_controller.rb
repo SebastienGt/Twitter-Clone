@@ -13,10 +13,10 @@ class PasswordResetsController < ApplicationController
       #binding.pry
       @user.create_reset_digest
       @user.send_password_reset_email
-      flash[:info] = "Email sent with password reset instructions"
+      flash[:info] = I18n.t 'user.emailSent'
       redirect_to root_url
     else
-      flash.now[:danger] = "Email adress not found"
+      flash.now[:danger] = I18n.t 'user.emailNotFound'
       render 'new'
     end
   end
@@ -28,12 +28,12 @@ class PasswordResetsController < ApplicationController
 
   def update
     if params[:user][:password].empty?
-      @user.errors.add(:password, "can't be empty")
+      @user.errors.add(:password, "#{I18n.t 'user.notEmpty'}")
       render 'edit'
     elsif @user.update(user_params)
       log_in @user
       @user.update_attribute(:reset_digest, nil)
-      flash[:success] = "Password has been reset."
+      flash[:success] = I18n.t 'user.passwordReset'
       redirect_to @user
     else
       render 'edit'
@@ -59,7 +59,7 @@ class PasswordResetsController < ApplicationController
 
     def check_expiration
       if @user.password_reset_expired?
-        flash[:danger] = "Password reset has expired"
+        flash[:danger] = I18n.t 'user.passwordExpired'
         redirect_to new_password_reset_url
       end
     end

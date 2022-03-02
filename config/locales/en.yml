@@ -41,6 +41,7 @@ en:
     logIn: "Log in"
     contactMe: "Contact me"
     clone: "A clone of Twitter with Rails by"
+    language: "English"
   home:
     welcome: "Welcome to Sebastien F."
     subWelcome: "This website was made to learn the Rails language, it is a clone of"
@@ -56,10 +57,29 @@ en:
     follow: "Follow"
     unfollow: "Unfollow"
     signUp: "Sign up"
+    verify: "Please, confirm your mail to keep going ..."
+    updated: "Profile updated"
+    deleted: "User deleted"
+    pleaseConnect: "Please log in."
+    emailSent: "Email sent with password reset instructions"
+    emailNotFound: "Email adress not found"
+    passwordReset: "Password has been reset."
+    passwordExpired: "Password reset has expired"
+    accountNotActivated: "Account not activated. "
+    checkEmail: "Check your email for the activation link."
+    invalidLogin: "Invalid email/password combination"
+    activated: "Account activated !"
+    invalidLink: "Invalid activation link"
+    notEmpty: "can't be empty"
   post:
     placeHolder: "Write your first post ..."
     publish: "Publish"
     delete: "Delete"
+    posts: "Posts"
+    created: "Post created !"
+    deleted: "Post deleted !"
+    posted: "Posted"
+    ago: "ago"
   feed:
     createFirst: "Create your first post and follow your friends to see their posts !"
   about:
@@ -76,5 +96,6 @@ en:
     allUsers: "All users"
   edit:
     updateProfile: "Update your profile"
+    save: "Save changes"
   system: 
     sure: "Are you sure ?"
