@@ -9,6 +9,10 @@ class Micropost < ApplicationRecord
             
 
 
+  def scanLink(text)
+    html_text = text.gsub(URI.regexp, '<a href="\0">\0</a>').html_safe
+    return html_text
+  end
 
   def display_image
     image.variant(resize_to_limit: [500, 500])
