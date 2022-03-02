@@ -30,4 +30,51 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  header:
+    home: "Home"
+    about: "About"
+    users: "Users"
+    account: "Account"
+    profile: "Profile"
+    options: "Settings"
+    logOut: "Log out"
+    logIn: "Log in"
+    contactMe: "Contact me"
+    clone: "A clone of Twitter with Rails by"
+  home:
+    welcome: "Welcome to Sebastien F."
+    subWelcome: "This website was made to learn the Rails language, it is a clone of"
+    signIn: "Sign in now !"
+    feed: "Feed"
+  contact:
+    contactMe: "Don't hesitate to contact me on"
+  user:
+    seeUser: "See my profile"
+    posts: "posts"
+    follower: "followers"
+    following: "following"
+    follow: "Follow"
+    unfollow: "Unfollow"
+    signUp: "Sign up"
+  post:
+    placeHolder: "Write your first post ..."
+    publish: "Publish"
+    delete: "Delete"
+  feed:
+    createFirst: "Create your first post and follow your friends to see their posts !"
+  about:
+    welcome: "Welcome to Sebastien F."
+    thankYou: "Thank you to look at my projects ! This project was made with the help of the online tutorial"
+    technology: "on the language"
+    description: "This tutorial make me learn different keys things :"
+    login: "The creation of a complete login system with good concept of security, with differents way to prevent attacks,
+    also a system to reset the password when it is needed by the user and a system to verify the mail (disabled here to make it easier for people to connect)."
+    publications: "Creation of publications to post text and pictures with the account and that everyone can see."
+    follow: "A following system to allow peoples to keep in touch with theirs favorites persons."
+    thankI: "Thank to Ismael for his help in this tutorial !"
+  index:
+    allUsers: "All users"
+  edit:
+    updateProfile: "Update your profile"
+  system: 
+    sure: "Are you sure ?"

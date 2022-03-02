@@ -8,16 +8,17 @@
       %section.micropost_form
         = render 'shared/micropost_form'
     .col-md-8
-      %h3 Fil d'actualité
+      %h3
+        = t('home.feed')
       = render 'shared/feed'
 - else
   .center.jumbotron
     %h1
-      Bienvenue sur le site de Sébastien F.
+      = t('home.welcome')
       %h1
         %h2
-          Ce site a été fait pour apprendre le langage Rails, il s'agit d'un clone de
+          = t('home.subWelcome')
           %a{:href => "https://twitter.com", :target => "_blank"} Twitter inc.
-        = link_to "S'inscrire maintenant !", signup_path, class: "btn btn-lg btn-primary"
+        = link_to "#{t('home.signIn')}", signup_path, class: "btn btn-lg btn-primary"
   = link_to image_tag("rails.svg", alt: "Rails logo", width: "200"), "https://rubyonrails.org/"
 = react_component("Test", { greeting: "Hello from react-rails." })

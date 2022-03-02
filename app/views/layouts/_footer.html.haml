@@ -1,12 +1,11 @@
 %footer.footer
   %small
-    Une copie de Twitter avec Rails
-    par
+    = t('header.clone')
     %a{:href => "https://github.com/SebastienGt", :target => "_blank"} Sébastien F.
   %nav
     %ul
-      %li= link_to "Aide", help_path
-      %li= link_to "Contactez-moi", contact_path
+      %li= link_to "#{t('header.about')}", help_path
+      %li= link_to "#{t('header.contactMe')}", contact_path
       %li
         %a{:href => "https://github.com/SebastienGt", :target => "_blank"} Github
       %li
