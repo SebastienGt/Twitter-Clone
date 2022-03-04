@@ -9,7 +9,8 @@
         = render 'shared/micropost_form'
     .col-md-8
       %h3
-        = t('home.feed')
+        %strong
+          = t('home.feed')
       = render 'shared/feed'
 - else
   .center.jumbotron
