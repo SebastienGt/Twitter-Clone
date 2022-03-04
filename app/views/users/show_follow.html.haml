@@ -2,7 +2,10 @@
 .row
   %aside.col-md-4
     %section.user_info
-      = gravatar_for @user
+      - if @user.profile.attached?
+        = image_tag @user.display_profile
+      - else 
+        = gravatar_for @user
       %h1= @user.name
       %span= link_to "#{t('user.seeUser')}", @user
       %span

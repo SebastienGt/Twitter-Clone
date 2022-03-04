@@ -3,7 +3,10 @@
   %aside.col-md-4
     %section.user_info
       %h1
-        = gravatar_for @user
+        - if @user.profile.attached?
+          = image_tag @user.display_profile
+        - else
+          = gravatar_for @user
         = @user.name
     %section.stats
       = render 'shared/stats'

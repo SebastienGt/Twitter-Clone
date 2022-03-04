@@ -40,6 +40,7 @@ class UsersController < ApplicationController
 
 	def update
 		@user = User.find(params[:id])
+		@user.profile.attach(params[:user][:profile])
 		if @user.update(user_params)
 		#Handle a update
 			flash[:success] = I18n.t 'user.updated'
@@ -71,7 +72,7 @@ class UsersController < ApplicationController
 
 	private
 		def user_params
-			params.require(:user).permit(:name, :email, :password, :password_confirmation)
+			params.require(:user).permit(:name, :email, :password, :password_confirmation, :profile)
 		end
 
 		def correct_user
