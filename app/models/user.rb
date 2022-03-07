@@ -9,7 +9,8 @@ class User < ApplicationRecord
 	has_many :following, through: :active_relationships, source: :followed
 	has_many :followers, through: :passive_relationships, source: :follower
 
-	
+	has_one_attached :profile
+
 	attr_accessor :remember_token, :activation_token, :reset_token
 	before_save :downcase_email
 	before_create :create_activation_digest
@@ -21,6 +22,9 @@ class User < ApplicationRecord
 
 	has_secure_password
 	validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+
+	validates :profile, content_type: { in: %w[image/jpeg image/gif image/png], message: "must be a valid image format" },
+                size: { less_than: 5.megabytes, message: "should be less than 5MB" }
 	
 	# Returns the hash digest of the given string.
 	def User.digest(string)
@@ -93,6 +97,11 @@ class User < ApplicationRecord
 	def following?(other_user)
 		following.include?(other_user)
 	end
+
+	def display_profile
+		profile.variant(resize_to_fill: [50, 50])
+	end
+
 
 	private
 

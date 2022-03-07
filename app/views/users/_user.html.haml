@@ -1,5 +1,8 @@
 %li
-  = gravatar_for user, size: 50
+  - if user.profile.attached?
+    = image_tag user.display_profile
+  - else
+    = gravatar_for user, size: 50
   = link_to user.name, user
   - if current_user.admin? && !current_user?(user)
     | #{link_to "#{t('post.delete')}", user, method: :delete, data: { confirm: "Vous êtes sûr ?" }}
